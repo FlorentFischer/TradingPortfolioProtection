@@ -11,10 +11,10 @@
 
 
 ## Summary of the repository:
-  1. Webapp Dashboard [->](Webapp_Dashboard)
+  1. [→ Webapp Dashboard](Webapp_Dashboard)
      - Use the Webapp
      - Deploy locally the Webapp
-  2. Jupyter Notebook 
+  2. [→ Jupyter Notebook](Jupyter_Notebook)
      - Google Colab 
      - 
   3.   
