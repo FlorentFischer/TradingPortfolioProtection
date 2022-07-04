@@ -16,6 +16,7 @@
      - Deploy locally the Webapp
      - Data
   2. [→ Jupyter Notebook](Jupyter_Notebook)
-     - Google Colab 
+     - Google Colab (Cloud Notebook)
+     - Jupyter Notebook File 
      - Data 
   3.   
