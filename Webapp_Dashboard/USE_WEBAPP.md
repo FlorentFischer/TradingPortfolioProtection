@@ -20,6 +20,8 @@ Input boxes for parameter selections are activated or deactivated depending on t
 
 ### B. Help Box:
 
+This box provides some advice to use the portfolio protection section of the dashboard
+
 ### C. In-sample performance analysis:
 
 ### D. Metrics of the strategy:
@@ -34,9 +36,30 @@ Input boxes for parameter selections are activated or deactivated depending on t
 # 2. Portfolio Protection Elements:
 
 
-### A. Protection strategy slection
+### A. Protection strategy selection
+
+> #### Protection method selection
+Here you have the possibility to select one of the four methods of portfolio protection implemented in the Master Thesis. When selected, the protection method will be applied to the optimal strategy selected in the trading portfolio part. /!\ Noticed that the protection do not depend on potential parameter selection from trading portfolio part /!\. 
+
+Among the methods available, you can select:
+- OBPI: Option based portfolio protection
+- CPPI: Constant portfolio protection inssurance
+- TIPP: Time invariant portfolio protection
+- HOC: Hybrid OBPI and CPPI
+
+> #### Parameters selection
+
+Here you have the possibility to change the parameters of the protection methods. Some parameters are already set by defaults but didn't correspond to particular optimal method. The possibility of parameter depends on the method selected above. Non-essential input box are deactivated, remaining activated only necessary input box. 
+
+Among the parameters to be modified you have:
+- Target volatility: This parameter is useful for OBPI and HOC methods.
+- Multiplier: This parameter is useful for CPPI, TIPP, and HOC methods. 
+- Rebalancing: This parameter is useful for CPPI and TIPP methods.
+- Minimum equity exposure: This parameter is useful for HOC method.
 
 ### B. Help Box:
+
+This box provides some advice to use the portfolio protection section of the dashboard
 
 ### C. Metrics of the strategy:
 
