@@ -4,6 +4,8 @@
 
 ## Master Thesis: Trading Portfolio Protection GitHub Repository 
 
+![Overview](Overview.png)
+
 ###### Webapp link: http://tradingportfolioprotecion.pythonanywhere.com/
 ###### Google Colab Jupyter Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11fdMWo-uugkErJrku6rkDVrZj8u7E7vc?usp=sharing) 
 
