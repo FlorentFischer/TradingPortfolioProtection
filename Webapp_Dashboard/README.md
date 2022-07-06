@@ -6,7 +6,8 @@
 3.   Technical info 
 
 
-
+<br />
+<br />
 
 # 1. Trading Portfolio Elements:
 
@@ -86,7 +87,8 @@ This graph aims to plot the performance of the Trading strategy and the S&P500 b
 
 This graph aims to plot the Indicator or Signal value of the Trading strategy depending on the trading strategy choosen previously. It will help you to understand how and when the portfolio is traded, and see how it is reflectd to the performance of the strategy on the performance graph above. 
 
-
+<br />
+<br />
 
 # 2. Portfolio Protection Elements:
 
