@@ -134,7 +134,8 @@ Among the metrics available you have:
 
 ### D. Performance of the protection strategy:
 
-### E. Indicator value:
+### E. Protection method allocations:
 
+This graph aims to plot the weights alloction of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributes. This graph don't plot the allocation the trading strategy adaption to the protection method but the allocation recommended by the protection method only. 
 
 
