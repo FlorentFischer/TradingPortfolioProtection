@@ -134,6 +134,8 @@ Among the metrics available you have:
 
 ### D. Performance of the protection strategy:
 
+This graph aims to plot the performance of the portfolio protection strategy of a given trading strategy, the trading strategy, and the 60/40 portfolio by diplaying the cumulative returns of them. Here, you will have the opprtunity to see the efficency of the portfolio protection strategy against the trading strategy, and against the 60/40 portfolio depending on the parameters selected previously. 
+
 ### E. Protection method allocations:
 
 This graph aims to plot the weights alloction of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributes. This graph don't plot the allocation the trading strategy adaption to the protection method but the allocation recommended by the protection method only. 
