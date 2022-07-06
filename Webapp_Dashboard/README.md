@@ -23,10 +23,10 @@ In this first part of the webapp, you have the possibility to explore the 6 stra
 |---|---|
 |MACD|Moving Average Convergence Divergence|
 |RSI|Relative Strength Index|
-|EMV|Ease of movment value|
+|EMV|Ease of Movment Value|
 |SVR|Support Vector Regression|
-|ANN|Artificial neural network|
-|RNN|Recurrent neural network|
+|ANN|Artificial Neural Network|
+|RNN|Recurrent Neural Network|
 
 
 > #### Parameter selection
