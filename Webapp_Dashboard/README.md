@@ -2,8 +2,19 @@
 
 
 1. Trading Portfolio Elements
-2.  Portfolio Protection Elements
-3.   Technical info 
+   - Selection Box 
+   - Help Box
+   - In-sample performance analysis
+   - Metrics of the strategy
+   - Performance of the trading strategy
+   - Indicator or Signal value
+2. Portfolio Protection Elements
+   - Selection Box 
+   - Help Box
+   - Metrics of the protection
+   - Performance of the protection strategy
+   - Protection method allocations
+3. Technical info 
 
 
 <br />
@@ -12,7 +23,7 @@
 # 1. Trading Portfolio Elements:
 
 
-### A. Input box:
+### A. Selection box:
 
 > #### Trading strategy selection
 
