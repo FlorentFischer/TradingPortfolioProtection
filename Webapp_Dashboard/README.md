@@ -27,7 +27,7 @@
 
 > #### Trading strategy selection
 
-In this first part of the webapp, you have the possibility to explore the 6 strategies from the Master Thesis. Here you just have to select one of the 6 strategies proposed, and then the webapp automatically integred it in the different graph and metrics of the webapp. After specifying a trading strategy, all of the webapp will consider this strategy for the different analysis graphs and metrics, and also consider it for the portfolio protection part. 
+In this first part of the webapp, you have the possibility to explore the six strategies from the Master Thesis. Here you just have to select one of the six strategies proposed, and then the webapp automatically integred it in the different graph and metrics of the webapp. After specifying a trading strategy, all of the webapp will consider this strategy for the different analysis graphs and metrics, and also consider it for the portfolio protection part. 
 
  > #### List of the available trading strategies:
 | Accronym | Trading Strategy | 
