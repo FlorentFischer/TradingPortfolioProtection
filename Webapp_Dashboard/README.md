@@ -15,6 +15,7 @@
    - Performance of the protection strategy
    - Protection method allocations
 3. Technical info 
+   - Deploy the web app in your local environment
 
 
 <br />
@@ -166,5 +167,29 @@ This graph aims to plot the performance of the portfolio protection strategy of 
 ### E. Protection method allocations:
 
 This graph aims to plot the weight allocations of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributed. This graph doesn't plot the allocation of the trading strategy adaption to the protection method but the allocation recommended by the protection method only. In-sample hyperparameters selection RNN
+
+
+<br />
+<br />
+
+
+
+# 3. Technical informations:
+
+
+### A. Deploy the web app in your local environment:
+
+You can deploy the web app dashboard in your local environment. To do this, you have to choose between the .py or .ipynb files in this folder of the repository, depending on the integrated development environment (IDE) you are using on your laptop. Install the **Data** folder mandatory for the well running of the application. Verify that all the required libraries in the requirement.txt files are installed on your IDE. 
+After all the previous steps you can run locally the dashboard. A local port will print in the IDE console and you need to click on it to deploy locally the dashboard.
+
+If you encounter any issues, verify that every library is installed on the right version. Then check if the path of every data element is the correct one. If after that you still have errors, please contact me at the following address: florent.fischer@unil.ch 
+
+
+
+
+
+
+
+
 
 
