@@ -31,7 +31,7 @@ In this first part of the webapp, you have the possibility to explore the 6 stra
 
 > #### Parameter selection
 
-For the parameter selection of the Trading portfolio section, you have the possibility to change the parameters for some trading strategies (not for machine and deep learning). It allows the user to explore the results and see if the optimal parameter found in the in-sample frame is consistent in the out-sample frame. After typing the parameter desired, the associated strategy is automatically computed by the webapp. 
+For the parameter selection of the Trading portfolio section, you can change the parameters for some trading strategies (not for machine and deep learning). It allows the user to explore the results and see if the optimal parameter found in the in-sample frame is consistent in the out-sample frame. After typing the parameter desired, the associated strategy is automatically computed by the web app. 
 
 Among the parameters to be modified you have:
   - Parameter 1: For MACD, RSI, and EMV trading strategies 
@@ -49,11 +49,11 @@ Among the parameters to be modified you have:
 
 ### B. Help Box:
 
-This box aims to provide some advice to the user of the dashboard. Indeed it help the user to understand the diffrent element present in the first section (Trading Portfolio). 
+This box aims to provide some advice to the user of the dashboard. Indeed it helps the user to understand the different elements present in the first section (Trading Portfolio). 
 
 ### C. In-sample performance analysis:
 
-This first graphical element is guide for the user to choose and explore the different possible parameters for the trading strategies. It just have an informal purpose and gives only an indication of results obtained in the in-sample framework. It could be useful for to choose the optimal parameters of the technical indicators trading strategies, but for the machine and deep learning strategies it have only an utility to inform the user if he want to reproduces the strategies. For every plot, the objective functions of the heatmaps are the Sharpe ratio function, dpending on the strategy parameters. 
+This first graphical element is a guide for the user to choose and explore the different possible parameters for the trading strategies. It just has an informational purpose and gives only an indication of results obtained in the in-sample framework. It could be useful to choose the optimal parameters of the technical indicators trading strategies, but for the machine and deep learning strategies, it has only utility to inform the user if he wants to reproduce the strategies. For every plot, the objective functions of the heatmaps are the Sharpe ratio function, depending on the strategy parameters. 
 
 |Strategy|Graph|
 |---|---|
@@ -66,26 +66,26 @@ This first graphical element is guide for the user to choose and explore the dif
 
 ### D. Metrics of the strategy:
 
-Above the perfomance graph of the trading strategy, we can see several metrics of the strategy selected previously. It is essential for the reading of the trading strategy in addition with the performance visualization. 
+Above the performance graph of the trading strategy, we can see several metrics of the trading strategy selected previously. They are essential for the reading of the trading strategy in addition to the performance visualization. 
 
 Among the metrics available you have: 
 
-|Metric|
+|Metrics|
 |---|
 |Annual returns|
-|Annual volatility|
-|Annual Sharpe ratio|
-|Annual Sortino ratio|
+|Annual standard deviation|
+|Annual Sharpe ratio Trading Portfolio|
+|Annual Sharpe ratio 60/40 Portfolio|
 |Maximum Drawdown|
 
 
 ### E. Performance of the trading strategy:
 
-This graph aims to plot the performance of the Trading strategy and the S&P500 by diplaying the cumulative returns of the strategy and the related benchmark. Here, you will have the opprtunity to see the efficency of the trading strategy against the S&P500 depending on the parameters selected previously when possible. 
+This graph aims to plot the performance of the Trading strategy and the 60/40 Portfolio by showing the cumulative returns of the strategy and the related benchmark. Here, you will have the opportunity to see the efficiency of the trading strategy against the 60/40 Portfolio depending on the parameters selected previously when possible. 
 
 ### F. Indicator or Signal value:
 
-This graph aims to plot the Indicator or Signal value of the Trading strategy depending on the trading strategy choosen previously. It will help you to understand how and when the portfolio is traded, and see how it is reflectd to the performance of the strategy on the performance graph above. 
+This graph aims to plot the Technical Indicator or Signal value of the Trading strategy depending on the trading strategy chosen previously. It will help you to understand how and when the portfolio is traded, and see how it is reflected in the performance of the strategy on the performance graph above. 
 
 <br />
 <br />
@@ -96,48 +96,64 @@ This graph aims to plot the Indicator or Signal value of the Trading strategy de
 ### A. Protection strategy selection
 
 > #### Protection method selection
-Here you have the possibility to select one of the four methods of portfolio protection implemented in the Master Thesis. When selected, the protection method will be applied to the optimal strategy selected in the trading portfolio part. /!\ Noticed that the protection do not depend on potential parameter selection from trading portfolio part /!\. 
+Here you can select one of the four methods of portfolio protection implemented in the Master Thesis. When selected, the protection method will be applied to the optimal strategy selected in the trading portfolio part. Noticed that the protection does not depend on the selected parameter from the trading portfolio part. 
 
 Among the methods available, you can select:
-- OBPI: Option based portfolio protection
-- CPPI: Constant portfolio protection inssurance
+- OBPI: Option-based portfolio protection
+- CPPI: Constant portfolio protection insurance
 - TIPP: Time invariant portfolio protection
 - HOC: Hybrid OBPI and CPPI
 
+ > #### List of the available portfolio protection methods:
+| Accronym | Portfolio Protection Method | 
+|---|---|
+|OBPI|Option-based portfolio protection|
+|CPPI|Constant portfolio protection insurance|
+|TIPP|Time invariant portfolio protection|
+|HOC|Hybrid OBPI and CPPI|
+
+
 > #### Parameters selection
 
-Here you have the possibility to change the parameters of the protection methods. Some parameters are already set by defaults but didn't correspond to particular optimal method. The possibility of parameter depends on the method selected above. Non-essential input box are deactivated, remaining activated only necessary input box. 
+Here you can change the parameters of the protection methods. Some parameters are already set by defaults but didn't correspond to a particular optimal method. The possibility of a parameter depends on the method selected above. Non-essential input boxes are deactivated, remaining activated only necessary input boxes. 
 
 Among the parameters to be modified you have:
 - Target volatility: This parameter is useful for OBPI and HOC methods.
 - Multiplier: This parameter is useful for CPPI, TIPP, and HOC methods. 
 - Rebalancing: This parameter is useful for CPPI and TIPP methods.
-- Minimum equity exposure: This parameter is useful for HOC method.
+- Minimum equity exposure: This parameter is useful for the HOC method.
+
+| Parameters | Methods implied | Range of variation | Recommended parameter |
+|---|---|---|---|
+| Target volatility | OBPI / HOC | 0 to 1 | ~0.3 - 0.35 |
+| Multiplier | CPPI / TIPP / HOC | 1 to 10+ | 1 |
+| Multiplier | CPPI / TIPP | 1 to 36+ | 12 |
+| Minimum equity exposure | HOC | 0 to 1 | ~0.3 - 0.5 |
 
 ### B. Help Box:
 
-This box aims to provide some advice to the user of the dashboard. Indeed it help the user to understand the diffrent element present in the second section (Portfolio Protection). 
+This box aims to provide some advice to the user of the dashboard. Indeed it helps the user to understand the different elements present in the second section (Portfolio Protection). 
 
 ### C. Metrics of the strategy:
 
-Above the perfomance graph of the portfolio protection, we can see several metrics of the strategy selected previously. It is essential for the reading of the protection method implemennted in addition with the performance visualization of the protection method. 
+Above the performance graph of the portfolio protection, we can see several metrics of the protection method selected previously. They are essential for the well reading of the protection method implemented in addition to the performance visualization of the protection method. 
 
 Among the metrics available you have: 
 
-|Metric|
+|Metrics|
 |---|
 |Annual returns|
-|Annual volatility|
-|Annual Sharpe ratio|
-|Annual Sortino ratio|
+|Annual standard deviation|
+|Annual Sharpe ratio Portfolio Protection|
+|Annual Sortino ratio Portfolio Protection|
 |Maximum Drawdown|
 
 ### D. Performance of the protection strategy:
 
-This graph aims to plot the performance of the portfolio protection strategy of a given trading strategy, the trading strategy, and the 60/40 portfolio by diplaying the cumulative returns of them. Here, you will have the opprtunity to see the efficency of the portfolio protection strategy against the trading strategy, and against the 60/40 portfolio depending on the parameters selected previously. 
+This graph aims to plot the performance of the portfolio protection strategy of a given trading strategy, the trading strategy, and the 60/40 portfolio by showing their cumulative returns. Here, you will have the opportunity to see the efficiency of the portfolio protection strategy against the trading strategy, and against the 60/40 portfolio depending on the parameters selected previously. 
 
 ### E. Protection method allocations:
 
-This graph aims to plot the weights alloction of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributes. This graph don't plot the allocation the trading strategy adaption to the protection method but the allocation recommended by the protection method only. 
+This graph aims to plot the weight allocations of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributed. This graph doesn't plot the allocation of the trading strategy adaption to the protection method but the allocation recommended by the protection method only. In-sample hyperparameters selection RNN
 
 
