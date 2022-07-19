@@ -182,7 +182,7 @@ This graph aims to plot the weight allocations of the protection method selected
 You can deploy the web app dashboard in your local environment. To do this, you have to choose between the .py or .ipynb files in this folder of the repository, depending on the integrated development environment (IDE) you are using on your laptop. Install the **Data** folder mandatory for the well running of the application. Verify that all the required libraries in the requirement.txt files are installed on your IDE. 
 After all the previous steps you can run locally the dashboard. A local port will print in the IDE console and you need to click on it to deploy locally the dashboard.
 
-If you encounter any issues, verify that every library is installed on the right version. Then check if the path of every data element is the correct one. If after that you still have errors, please contact me at the following address: florent.fischer@unil.ch 
+If you encounter any issues, verify that every package is installed on the right version as mentionned in the requirement.txt file. Then check if the path of every data element is the correct one. If after that you still have errors, please contact me at the following address: florent.fischer@unil.ch 
 
 
 
