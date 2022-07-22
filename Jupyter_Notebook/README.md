@@ -7,6 +7,13 @@
 
 ## 1. Google colab Jupyter Notebook
 
+<br/>
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/11fdMWo-uugkErJrku6rkDVrZj8u7E7vc?usp=sharing) 
+
+
+
+
 This link to the Google Colaboratory Jupyter Notebook is available to access the entire Master Thesis algorithmic computing and analisis part. 
 You will find on it the following structure of elements covered in the thesis.
 
