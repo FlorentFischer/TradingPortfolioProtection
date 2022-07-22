@@ -19,7 +19,7 @@
      - Google Colab (Cloud Notebook)
      - Jupyter Notebook File 
      - Data  
-  3. [→ Aditional Components ←](Jupyter_Notebook)
+  3. [→ Aditional Components /!\ In construction /!\ ←](Jupyter_Notebook)
      - Results Tables 
      - Results Graphs 
      - Master Thesis  
