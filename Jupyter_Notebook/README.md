@@ -14,7 +14,7 @@
 
 
 
-This link to the Google Colaboratory Jupyter Notebook is available to access the entire Master Thesis algorithmic computing and analisis part. 
+This link to the Google Colaboratory Jupyter Notebook is available to access the entire Master Thesis algorithmic computing and analysis part. 
 You will find on it the following structure of elements covered in the thesis.
 
 Environment
