@@ -22,7 +22,6 @@
   3. [→ Aditional Components /!\ In construction /!\ ←](Jupyter_Notebook)
      - Results Tables 
      - Results Graphs 
-     - Master Thesis  
 
 <br />
 
