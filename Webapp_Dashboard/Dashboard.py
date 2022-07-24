@@ -18,8 +18,8 @@ import time
 
 
 
-option_chain = pd.read_excel('/home/TradingPortfolioProtecion/mysite/option_chain.xls', index_col = 'Date')
-Dataset = pd.read_excel('/home/TradingPortfolioProtecion/mysite/Dataset.xls', index_col = 'Date')
+option_chain = pd.read_excel('/home/algotradingportfolioprotection/mysite/option_chain.xls', index_col = 'Date')
+Dataset = pd.read_excel('/home/algotradingportfolioprotection/mysite/Dataset.xls', index_col = 'Date')
 
 
 
@@ -39,19 +39,21 @@ df_out = pd.concat([df_out,option_chain], axis = 1).dropna()
 
 
 # ML-DL Stretgies
-svr_strategy = pd.read_excel('/home/TradingPortfolioProtecion/mysite/svr_strategy.xls', index_col = 'Date')
-ann_strategy = pd.read_excel('/home/TradingPortfolioProtecion/mysite/ann_strategy.xls', index_col = 'Date')
-rnn_strategy = pd.read_excel('/home/TradingPortfolioProtecion/mysite/rnn_strategy.xls', index_col = 'Date')
+svr_strategy = pd.read_excel('/home/algotradingportfolioprotection/mysite/svr_strategy.xls', index_col = 'Date')
+ann_strategy = pd.read_excel('/home/algotradingportfolioprotection/mysite/ann_strategy.xls', index_col = 'Date')
+rnn_strategy = pd.read_excel('/home/algotradingportfolioprotection/mysite/rnn_strategy.xls', index_col = 'Date')
 
 # Heatmaps
-perf_emv = pd.read_excel('/home/TradingPortfolioProtecion/mysite/perf_emv.xls', index_col = 'Unnamed: 0')
-perf_rsi = pd.read_excel('/home/TradingPortfolioProtecion/mysite/perf_rsi.xls', index_col = 'Unnamed: 0')
-perf_macd = pd.read_excel('/home/TradingPortfolioProtecion/mysite/perf_macd.xls', index_col = 'Unnamed: 0')
+perf_emv = pd.read_excel('/home/algotradingportfolioprotection/mysite/perf_emv.xls', index_col = 'Unnamed: 0')
+perf_rsi = pd.read_excel('/home/algotradingportfolioprotection/mysite/perf_rsi.xls', index_col = 'Unnamed: 0')
+perf_macd = pd.read_excel('/home/algotradingportfolioprotection/mysite/perf_macd.xls', index_col = 'Unnamed: 0')
 
 # Studies
-study_ann = pd.read_excel('/home/TradingPortfolioProtecion/mysite/study_ann.xls', index_col = 'Unnamed: 0')
-study_svr = pd.read_excel('/home/TradingPortfolioProtecion/mysite/study_svr.xls', index_col = 'Unnamed: 0')
-study_rnn = pd.read_excel('/home/TradingPortfolioProtecion/mysite/study_rnn.xls', index_col = 'Unnamed: 0')
+study_ann = pd.read_excel('/home/algotradingportfolioprotection/mysite/study_ann.xls', index_col = 'Unnamed: 0')
+study_svr = pd.read_excel('/home/algotradingportfolioprotection/mysite/study_svr.xls', index_col = 'Unnamed: 0')
+study_rnn = pd.read_excel('/home/algotradingportfolioprotection/mysite/study_rnn.xls', index_col = 'Unnamed: 0')
+
+
 
 
 class Rebalancing:
@@ -1152,25 +1154,26 @@ class Visualization:
 
     def fig_alloc(self):
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=self.portfolio.index, y=(self.portfolio['W_r']).values,
+        fig.add_trace(go.Scatter(x=self.portfolio.index, y=(self.portfolio['W_r']).values*100,
                             mode='lines',name='Risky Allocation',line_color = '#f44263'))
 
-        fig.add_trace(go.Scatter(x=self.portfolio.index, y=(self.portfolio['W_s']).values,
+        fig.add_trace(go.Scatter(x=self.portfolio.index, y=(self.portfolio['W_s']).values*100,
                     mode='lines',name='Safe Allocation',line_color = '#d342f4'))
 
 
         fig.update_layout(title="Protection Allocations:",
                     xaxis_title="Years",
+                    yaxis_title="Allocations (%)",
                     paper_bgcolor="#FFFFFF",
                     plot_bgcolor="#FFFFFF",
                     height = 300,
                     legend=dict(traceorder='normal',
                     font=dict(size=10)),
                     template="plotly_white")
-
+        
         fig.update_xaxes(showgrid=True, gridwidth=0.5, gridcolor='gray')
         fig.update_yaxes(showgrid=True, gridwidth=0.5, gridcolor='gray')
-
+        
         return fig
 
 
@@ -1232,7 +1235,7 @@ ann_returns = html.Div([html.Div([dcc.Markdown("", id="ret")],
                         html.Div([dcc.Markdown("Annual returns")], style={"margin-left":"5px"})],
                        style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-right":"5px",
@@ -1244,7 +1247,7 @@ std = html.Div([html.Div([dcc.Markdown("", id="std")],style={"font-size":params[
                        html.Div([dcc.Markdown("Annual standard deviation")], style={"margin-left":"5px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1259,7 +1262,7 @@ sharpe_pf = html.Div([html.Div([dcc.Markdown("", id="sharpe_pf")],style={"font-s
                        html.Div([dcc.Markdown("Sharpe Ratio Trading Portfolio")], style={"margin-left":"0px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1270,10 +1273,10 @@ sharpe_pf = html.Div([html.Div([dcc.Markdown("", id="sharpe_pf")],style={"font-s
 sharpe_b = html.Div([html.Div([dcc.Markdown("", id="sharpe_b")],style={"font-size":params["font-size"],
                                                                        "margin-left":params["margin-left"],
                                                                       "font-weight":"bold"}),
-                       html.Div([dcc.Markdown("Sharpe Ratio 60/40 Portfolio")], style={"margin-left":"0px"})],
+                       html.Div([dcc.Markdown("Sharpe Ratio 60/40 portfolio")], style={"margin-left":"0px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1287,15 +1290,16 @@ mdd = html.Div([html.Div([dcc.Markdown("", id="mdd")],style={"font-size":params[
                        html.Div([dcc.Markdown("Maximum Drawdown")], style={"margin-left":"5px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
                              "margin-right":"5px",
                              "border-radius": params["border-radius"]})
 
+
 ##############################################################################################################
-############# Protected portfolio Metrics
+############# Protected portfolio Metrics 
 
 ann_returns_1 = html.Div([html.Div([dcc.Markdown("", id="ret_1")],
                                  style={"font-size":params["font-size"],
@@ -1304,7 +1308,7 @@ ann_returns_1 = html.Div([html.Div([dcc.Markdown("", id="ret_1")],
                         html.Div([dcc.Markdown("Annual returns")], style={"margin-left":"5px"})],
                        style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-right":"5px",
@@ -1316,7 +1320,7 @@ std_1 = html.Div([html.Div([dcc.Markdown("", id="std_1")],style={"font-size":par
                        html.Div([dcc.Markdown("Annual standard deviation")], style={"margin-left":"5px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1331,7 +1335,7 @@ sharpe_pf_1 = html.Div([html.Div([dcc.Markdown("", id="sharpe_pf_1")],style={"fo
                        html.Div([dcc.Markdown("Sharpe Ratio Portfolio Protection")], style={"margin-left":"0px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1345,7 +1349,7 @@ sharpe_b_1 = html.Div([html.Div([dcc.Markdown("", id="sharpe_b_1")],style={"font
                        html.Div([dcc.Markdown("Sortino Ratio Portfolio Protection")], style={"margin-left":"0px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1359,7 +1363,7 @@ mdd_1 = html.Div([html.Div([dcc.Markdown("", id="mdd_1")],style={"font-size":par
                        html.Div([dcc.Markdown("Maximum Drawdown")], style={"margin-left":"5px"})],
                       style={"border":"2px solid",
                              "border-color":"#4285F4",
-                             "font-size":"10px",
+                             "font-size":"15px",
                              "background-color":params["background-color"],
                              "height": params["height"],
                              "margin-left":"5px",
@@ -1415,25 +1419,25 @@ spaces = html.Div([dcc.Markdown("", style={"height":"20px"})])
 strategy = html.Div([dcc.Markdown("> **SELECTIONS FOR THE TRADING PORTFOLIO**",
                                   style={"color":colors["color"],"font-size":"20px"}),
                      dcc.Markdown("",style={"height":"20px"}),
-                     dcc.Markdown('''**TRADING STRATEGY SELECTION**''',
+                     dcc.Markdown('''**TRADING STRATEGY SELECTION**''', 
                                   style={"color":colors["color"]}),
                      dcc.Dropdown(id="strategy",
                                   options=strat,
                                   value="macd",
                                   multi=False,
                                  style={"width":"60%"})],
-                    style={"margin":"0px 0px 0px 0px",
+                    style={"margin":"0px 0px 0px 0px", 
                            "width":"100%",
                            "padding":"30px 0px 0px 0px",
                            'marginLeft' : '50px'})
 
-input_value_1 = html.Div([dcc.Markdown("",style={"height":"20px"}),dcc.Markdown("**TRADING PARAMETER VALUES **",
+input_value_1 = html.Div([dcc.Markdown("",style={"height":"20px"}),dcc.Markdown("**TRADING PARAMETER VALUES **", 
                                      style={"color":colors["color"],"margin":"20px 0px 0px 50px"}),
                           dcc.Markdown("• Trading parameter 1",
                                      style={"color":colors["color"],
                                             "margin":"-10px 0px 0px 70px"}),
                         dcc.Input(id="param_1", type="text", value = 58,
-                                  placeholder="Parameter 1 (ex: 12)",
+                                  placeholder="Parameter 1 (ex: 12)", 
                                   style={"margin":"0px 0px 0px 50px","width":"35%"})])
 
 
@@ -1445,12 +1449,16 @@ input_value_2 = html.Div([dcc.Markdown("• Trading parameter 2",
                                     style={"margin":"0px 0px 0px 50px","width":"35%"})])
 
 
-bandeau_2_gauche = html.Div([dcc.Graph(id="heatmap")], style={"margin":"20px 0px 30px 0px"})
+bandeau_2_gauche = html.Div([dcc.Graph(id="heatmap"), 
+                             dcc.Loading(id = "loading-icon-11", 
+                                         type="cube",
+                                         fullscreen = False,
+                                         style={"margin":"0px 0px 400px 0px"})], style={"margin":"20px 0px 30px 0px"})
 
 text_2 = dcc.Markdown('''
 >
-> **Trading portfolio section:**
->
+> **Trading portfolio section:** 
+> 
 In this section, you have the choice to select different trading portfolios.
 For some of them, you can vary the parameters by choosing the one you want.
 To adjust the selection of parameters, you can use the heatmap of the in-sample performance plot.
@@ -1469,7 +1477,7 @@ as well as the performance graph and the strategy's indicator or signal value.
 
 
 
-bandeau_1_gauche = html.Div([strategy, input_value_1,spaces,input_value_2],
+bandeau_1_gauche = html.Div([strategy, input_value_1,spaces,input_value_2], 
                             style={"margin":"0px 0px 0px 0px","height":"550px",
                                    "background-color":colors["background-color"],
                                    "padding":"10px 0px 0px 0px",
@@ -1478,9 +1486,8 @@ bandeau_1_gauche = html.Div([strategy, input_value_1,spaces,input_value_2],
                                    "border-color":"#4285F4"})
 
 
-bandeau_1_droite = html.Div([dcc.Graph(id="cumret",
-                                       style={"margin":"0px 0px 0px 0px"}),
-                             dcc.Loading(id = "loading-icon-1",
+bandeau_1_droite = html.Div([dcc.Graph(id="cumret",style={"margin":"0px 0px 0px 0px"}),
+                            dcc.Loading(id = "loading-icon-12", 
                                          type="cube",
                                          fullscreen = False,
                                          style={"margin":"0px 0px 400px 0px"})])
@@ -1491,7 +1498,11 @@ review = html.Div([ann_returns, std, sharpe_pf, sharpe_b,mdd],
                          "height":"100px","margin":"5px 0px -5px 0px",
                          "color":"white","text-align": "center"})
 
-bandeau_2_droite = html.Div([dcc.Graph(id="indic")])
+bandeau_2_droite = html.Div([dcc.Graph(id="indic"),
+                            dcc.Loading(id = "loading-icon-13", 
+                                         type="cube",
+                                         fullscreen = False,
+                                         style={"margin":"0px 0px 400px 0px"})])
 
 structure_1 = html.Div([bandeau_1_gauche,text_2,bandeau_2_gauche], style={"columnCount":2,"margin":"10px 0px -0px -0px"})
 
@@ -1507,7 +1518,7 @@ methods = html.Div([dcc.Markdown("> **SELECTIONS FOR THE PORTFOLIO PROTECTION**"
                    style={"color":"#ffffff","margin":"10px 0px 0px 50px"})
 
 volat = html.Div([dcc.Markdown("",style={"height":"15px"}),
-                  dcc.Markdown("**PARAMETER VALUE FOR PROTECTION**",
+                  dcc.Markdown("**PARAMETER VALUE FOR PROTECTION**", 
                                 style={"color":colors["color"],"margin":"10px 0px 0px 50px"}),
                   dcc.Markdown("• Target volatility",
                                      style={"color":colors["color"],
@@ -1539,8 +1550,8 @@ mini = html.Div([dcc.Markdown("• Minimum Equity Exposure",
 
 text_prot = dcc.Markdown('''
 >
-> **Portfolio protection section:**
->
+> **Portfolio protection section:** 
+> 
 In this section, you have the choice to select different portfolio protection methods.
 The protection methodology chosen will be applied to the trading portfolio selected in the previous section
 and with the optimal parameters found in the in-sample period for each trading strategy
@@ -1570,28 +1581,32 @@ bandeau_test = html.Div([methods,volat,spaces,multi,spaces,reb,spaces,mini],
                                 "border-color":"#4285F4",
                                "padding":"10px 0px 0px 0px"})
 
-########### Right Side
+########### Right Side 
 
 graph_protec = html.Div([dcc.Graph(id="perf_protec",style={"margin":"20px 0px 0px 0px"}),
-                         dcc.Loading(id = "loading-icon-2",
+                         dcc.Loading(id = "loading-icon-21",
                                      type="cube",
                                      fullscreen = False,
                                      style={"margin":"0px 0px 400px 0px"})])
 
-alloc = html.Div([dcc.Graph(id="allocations",style={"margin":"0px 0px 0px 0px"})])
+alloc = html.Div([dcc.Graph(id="allocations",style={"margin":"0px 0px 0px 0px"}),
+                 dcc.Loading(id = "loading-icon-22",
+                                     type="cube",
+                                     fullscreen = False,
+                                     style={"margin":"0px 0px 400px 0px"})])
 
 review_1 = html.Div([ann_returns_1, std_1, sharpe_pf_1, sharpe_b_1,mdd_1],
                     style={"columnCount":5, "background-color":"#303030",
                            "height":"100","margin":"5px 0px 5px 0px",
                            "color":"white","text-align": "center"})
 
-structure_protec_right = html.Div([review_1,graph_protec,alloc],
+structure_protec_right = html.Div([review_1,graph_protec,alloc], 
                             style={"margin":"10px 0px 0px 0px"})
 
-structure_protec = html.Div([bandeau_test,text_prot],
+structure_protec = html.Div([bandeau_test,text_prot], 
                             style={"columnCount":2,"margin":"10px 0px 0px 0px"})
-
-structure_trading_right = html.Div([review,bandeau_1_droite,bandeau_2_droite],
+                 
+structure_trading_right = html.Div([review,bandeau_1_droite,bandeau_2_droite], 
                             style={"margin":"10px 0px 0px 0px"})
 
 ########## Dashboard
@@ -1601,15 +1616,17 @@ dashboard = html.Div([header1,
                       structure_trading_right,
                       header3,
                       structure_protec,
-                      structure_protec_right],
+                      structure_protec_right], 
                       style={"background":"#303030","margin":"0px -15px -0px -15px"})
 
 
 app.layout = dashboard
 
-####### CALLBACKS N°1: Trading portfolio only
+####### CALLBACKS N°1: Trading portfolio only 
 
-@app.callback(Output("loading-icon-1", "figure"),
+@app.callback(Output("loading-icon-11", "figure"),
+              Output("loading-icon-12", "figure"),
+              Output("loading-icon-13", "figure"),
               Output("cumret", "figure"),
               Output("indic", "figure"),
               Output("heatmap", "figure"),
@@ -1628,11 +1645,11 @@ app.layout = dashboard
 
 def affichage_1(lpp_value,param1,param2):
 
-
+    
     ################# Systematic trading strategy
     database = df_out
     trade = Rebalancing(database,svr_strategy,ann_strategy,rnn_strategy)
-
+    
     if lpp_value == "macd":
         block_1 = False
         block_2 = False
@@ -1668,50 +1685,51 @@ def affichage_1(lpp_value,param1,param2):
         input_change_1 = {"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_2 = {"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         trade.ANN()
-
+ 
     elif lpp_value == "rnn":
         block_1 = True
         block_2 = True
         input_change_1 = {"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_2 = {"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         trade.RNN()
-
-
-    # Computation of metrics
+    
+    
+    # Computation of metrics 
     returns_ann = np.round((trade.portfolio['Strategy'].mean())*252*100,2)
     std_ann = np.round((trade.portfolio['Strategy'].std())*np.sqrt(252)*100,2)
     sharpe = np.round(returns_ann/std_ann,2)
-
+    
     returns_ann_b = np.round((trade.portfolio['60/40'].mean())*252*100,2)
     std_ann_b = np.round((trade.portfolio['60/40'].std())*np.sqrt(252)*100,2)
     sharpe_b = np.round(returns_ann_b/std_ann_b,2)
-
+    
     cumul = (trade.portfolio['Strategy'].dropna().cumsum()+1)
     rolling_max = np.maximum.accumulate(cumul)
     max_drawdown  = np.round(np.min(cumul/rolling_max - 1)*100,2)
-
+    
     # Format
     R_ann = "{}%".format(returns_ann)
     Std_ann = "{}%".format(std_ann)
     Sharpe = "{}".format(sharpe)
     Sharpe_b = "{}".format(sharpe_b)
     MDD = "{}%".format(max_drawdown)
-
-
-    # Visualization of the portfolios
+    
+    
+    # Visualization of the portfolios 
     vis = Visualization(trade.portfolio,lpp_value)
     cum = vis.fig_cumulative_returns()
     indic = vis.fig_technical_indicator()
     heatmap = vis.heatmap()
-    z = 3
+    z,r,f = 3,3,3
+    
+    time.sleep(2)
+    return z,r,f,cum, indic,heatmap,R_ann,Std_ann,Sharpe,Sharpe_b,MDD,block_2,input_change_2,block_1,input_change_1
 
-    time.sleep(1)
-    return z,cum, indic,heatmap,R_ann,Std_ann,Sharpe,Sharpe_b,MDD,block_2,input_change_2,block_1,input_change_1
 
+####### CALLBACKS N°2: Protection of the trading portfolio  
 
-####### CALLBACKS N°2: Protection of the trading portfolio
-
-@app.callback([Output("loading-icon-2", "figure"),
+@app.callback([Output("loading-icon-21", "figure"),
+               Output("loading-icon-22", "figure"),
               Output("perf_protec", "figure"),
               Output("allocations", "figure"),
               Output("ret_1", "children"),
@@ -1735,7 +1753,7 @@ def affichage_1(lpp_value,param1,param2):
               Input("min_eq", "value")])
 
 def affichage_2(trading,protec,volatility,multiplier,rebalancing,min_eq):
-
+    
     p = Protection(df_out,svr_strategy,ann_strategy,rnn_strategy,trading)
 
     if protec =='OBPI':
@@ -1748,7 +1766,7 @@ def affichage_2(trading,protec,volatility,multiplier,rebalancing,min_eq):
         input_change_2={"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_3={"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_4={"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
-
+        
     elif protec =='CPPI':
         p.CPPI(int(multiplier), int(rebalancing))
         block_1 = True
@@ -1759,7 +1777,7 @@ def affichage_2(trading,protec,volatility,multiplier,rebalancing,min_eq):
         input_change_2={"background-color":"#FFFFFF","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_3={"background-color":"#FFFFFF","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_4={"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
-
+        
     elif protec =='TIPP':
         p.TIPP(int(multiplier), int(rebalancing))
         block_1 = True
@@ -1770,7 +1788,7 @@ def affichage_2(trading,protec,volatility,multiplier,rebalancing,min_eq):
         input_change_2={"background-color":"#FFFFFF","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_3={"background-color":"#FFFFFF","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_4={"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
-
+        
     elif protec =='HOC':
         p.HOC(float(volatility),int(multiplier), float(min_eq))
         block_1 = False
@@ -1781,32 +1799,32 @@ def affichage_2(trading,protec,volatility,multiplier,rebalancing,min_eq):
         input_change_2={"background-color":"#FFFFFF","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_3={"background-color":"#131313","margin":"0px 0px 0px 50px","width":"35%"}
         input_change_4={"background-color":"#FFFFFF","margin":"0px 0px 0px 50px","width":"35%"}
-
-    # Computation of metrics
+    
+    # Computation of metrics 
     returns_ann = np.round((p.portfolio['Strategy_protection'].mean())*252*100,2)
     std_ann = np.round((p.portfolio['Strategy_protection'].std())*np.sqrt(252)*100,2)
     sharpe = np.round(returns_ann/std_ann,2)
     sortino = np.round((returns_ann/100)/(p.portfolio['Strategy_protection'][p.portfolio['Strategy_protection']<0].std()*np.sqrt(252)),2)
-
+    
     cumul = (p.portfolio['Strategy_protection'].dropna().cumsum()+1)
     rolling_max = np.maximum.accumulate(cumul)
     max_drawdown  = np.round(np.min(cumul/rolling_max - 1)*100,2)
-
-    # Format of the metrics
+    
+    # Format of the metrics 
     R_ann = "{}%".format(returns_ann)
     Std_ann = "{}%".format(std_ann)
     Sharpe = "{}".format(sharpe)
     Sortino = "{}".format(sortino)
     MDD = "{}%".format(max_drawdown)
-
+    
     # Visualization of the webapp graphs
     vis = Visualization(p.portfolio,trading)
     cum = vis.performance_protection()
     allocations = vis.fig_alloc()
-    z = 3
-
-    time.sleep(1)
-    return z,cum,allocations,R_ann,Std_ann,Sharpe,Sortino,MDD,block_1,input_change_1,block_2,input_change_2,block_3,input_change_3,block_4,input_change_4
+    z,r = 3,3
+    
+    time.sleep(2)
+    return z,r,cum,allocations,R_ann,Std_ann,Sharpe,Sortino,MDD,block_1,input_change_1,block_2,input_change_2,block_3,input_change_3,block_4,input_change_4
 
 if __name__ == '__main__':
     app.run_server(debug=False)
