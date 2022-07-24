@@ -28,4 +28,4 @@
 
 ## Overview of the webapp
 
-[![Overview](Overview.png)](https://algotradingportfolioprotection.pythonanywhere.com/)
+[![Overview](Overview_Dashboard.png)](https://algotradingportfolioprotection.pythonanywhere.com/)
