@@ -28,7 +28,7 @@
 
 > #### Trading strategy selection
 
-In this first part of the webapp, you have the possibility to explore the six strategies from the Master Thesis. Here you just have to select one of the six strategies proposed, and then the webapp automatically integred it in the different graph and metrics of the webapp. After specifying a trading strategy, all of the webapp will consider this strategy for the different analysis graphs and metrics, and also consider it for the portfolio protection part. 
+In this first part of the web app, you can explore the six strategies from the Master Thesis. Here you just have to select one of the six strategies proposed, and then the web app automatically integrated it into the different graphs and metrics of the web app. After specifying a trading strategy, all of the web app will consider this strategy for the different analysis graphs and metrics, and also consider it for the portfolio protection part.
 
  > #### List of the available trading strategies:
 | Accronym | Trading Strategy | 
@@ -162,11 +162,11 @@ Among the metrics available you have:
 
 ### D. Performance of the protection strategy:
 
-This graph aims to plot the performance of the portfolio protection strategy of a given trading strategy, the trading strategy, and the 60/40 portfolio by showing their cumulative returns. Here, you will have the opportunity to see the efficiency of the portfolio protection strategy against the trading strategy, and against the 60/40 portfolio depending on the parameters selected previously. 
+This graph aims to plot the performance of the portfolio protection strategy of a given trading strategy, the trading strategy, and the 60/40 portfolio by showing their cumulative returns. Here, you will have the opportunity to see the efficiency of the portfolio protection strategy against the trading strategy, and the 60/40 portfolio depending on the parameters selected previously. 
 
 ### E. Protection method allocations:
 
-This graph aims to plot the weight allocations of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributed. This graph doesn't plot the allocation of the trading strategy adaption to the protection method but the allocation recommended by the protection method only. In-sample hyperparameters selection RNN
+This graph aims to plot the weight allocations of the protection method selected previously. It will help you to understand how the allocations between the risky and the risk-free assets are distributed. This graph doesn't plot the allocation of the trading strategy adaption to the protection method but the allocation recommended by the protection method only.
 
 
 <br />
@@ -182,7 +182,7 @@ This graph aims to plot the weight allocations of the protection method selected
 You can deploy the web app dashboard in your local environment. To do this, you have to choose between the .py or .ipynb files in this folder of the repository, depending on the integrated development environment (IDE) you are using on your laptop. Install the **Data** folder mandatory for the well running of the application. Verify that all the required libraries in the requirement.txt files are installed on your IDE. 
 After all the previous steps you can run locally the dashboard. A local port will print in the IDE console and you need to click on it to deploy locally the dashboard.
 
-If you encounter any issues, verify that every package is installed on the right version as mentionned in the requirement.txt file. Then check if the path of every data element is the correct one. If after that you still have errors, please contact me at the following address: florent.fischer@unil.ch 
+If you encounter any issues, verify that every package is installed on the right version as mentioned in the requirement.txt file. Then check if the path of every data element is the correct one. If after that you still have errors, please contact me at the following address: florent.fischer@unil.ch 
 
 
 
