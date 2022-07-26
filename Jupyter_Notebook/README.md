@@ -14,8 +14,7 @@
 
 
 
-This link to the Google Colaboratory Jupyter Notebook allows access to the entire Master Thesis algorithmic computing and analysis part. 
-You will find on it the following structure of elements covered in the thesis.
+This link to the Google Colaboratory Jupyter Notebook allows access to the entire Master Thesis algorithmic computing and analysis implementations. You will find on it the following structure of elements covered in the thesis.
 
 Environment
 
@@ -56,4 +55,4 @@ Part 2: Results
 
 ## 2. Jupyter Notebook file
 
-The Jupyter Notebook of the Master Thesis is also available under the **.ipynb** file. This file is the same as the Google Colab Notebook and can be used to implement it on your computer, or in consultation only when clicking on it.
+The Jupyter Notebook of the Master Thesis is also available under the **.ipynb** file. This file is the same as the Google Colab Notebook and can be used to implement it on your computer or in consultation only when clicking on it.
