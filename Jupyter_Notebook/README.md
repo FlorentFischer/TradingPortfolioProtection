@@ -22,28 +22,28 @@ Part 0 - Data
   - Part 0.A — Data Exploration
   - Part 0.B — Option Data Modeling
 
-Part 1.A — Technical indicator trading
-  - Statistical significance
-  - MACD
-  - EVM
-  - RSI
+Part 1.A — Technical Indicator Trading
+  - Multiple Testing Function
+  - MACD Indicator
+  - EVM Indicator
+  - RSI Indicator
 
-Part 1.B — Machine learning and Deep learning trading models
-  - Support vector regression
-  - ANN : sharpe optimized
-  - RNN: sharpe optimized
+Part 1.B — Machine Learning and Deep Learning Trading Models
+  - SVR Model
+  - ANN Model
+  - RNN Model
 
-Part 1: Results
-  - Metrics functions
+Part 1 – Trading Portfolios Results
+  - Metrics Function
   - Results
 
 Part 2 — Portfolio Protection
-  - OBPI : Optimized OBPI with Risk Budgeting
-  - CPPI - MT
-  - TIPP - MT
-  - CPPI - OBPI - MEE
+  - OBPI Strategy (with Risk Budgteing)
+  - CPPI Strategy
+  - TIPP Strategy
+  - HOC Strategy
 
-Part 2: Results
+Part 2 – Portfolio Protections Results
   - Metrics Function
   - MACD portfolio protection
   - RSI portfolio protection
