@@ -879,7 +879,7 @@ class Visualization:
         # Add some layout
         fig.update_layout(title="Cumulative Returns: Trading Portfolio",
                     xaxis_title="Years",
-                    yaxis_title="Cumulative Returns %", title_x=0.5,
+                    yaxis_title="Cumulative Returns (%)", title_x=0.5,
                     paper_bgcolor="#FFFFFF",
                     plot_bgcolor="#FFFFFF",
                     height = 400,
@@ -920,7 +920,7 @@ class Visualization:
         # Add some layout
         fig.update_layout(title="Cumulative Returns: Portfolio Protection",
                     xaxis_title="Years",
-                    yaxis_title="Cumulative Returns %",
+                    yaxis_title="Cumulative Returns (%)",
                     title_x=0.5,
                     height = 400,
                     paper_bgcolor="#FFFFFF",
@@ -1465,7 +1465,7 @@ To adjust the selection of parameters, you can use the heatmap of the in-sample 
 After the selections are made, the metrics of the trading strategy are automatically given,
 as well as the performance graph and the strategy's indicator or signal value.
 >
-> **For more information [→ see documentation] (https://github.com/FlorentFischer/TradingPortfolioProtection/blob/7fee5e07a9984e81eb337655f4cb31796563d91f/Webapp_Dashboard/README.md)**''',
+> **For more information [→ see documentation] (https://github.com/FlorentFischer/TradingPortfolioProtection/blob/main/Webapp_Dashboard/README.md)**''',
                     style={"color":colors["color"],
                            "height" : "210px",
                            "margin":"30px 0px 20px -5px",
@@ -1563,7 +1563,7 @@ Once every element is specified, the web app automatically computes the portfoli
 You can then have access to the metrics of the strategy, as well as the performance graph of the protection
 and the allocation of risky and risk-free assets proposed by the protection method.
 >
-> **For more information [→ see documentation] (https://github.com/FlorentFischer/TradingPortfolioProtection/blob/7fee5e07a9984e81eb337655f4cb31796563d91f/Webapp_Dashboard/README.md)**''',
+> **For more information [→ see documentation] (https://github.com/FlorentFischer/TradingPortfolioProtection/blob/main/Webapp_Dashboard/README.md)**''',
                     style={"color":colors["color"],
                            "height":"470px",
                            "margin":"10px 0px 20px 10px",
