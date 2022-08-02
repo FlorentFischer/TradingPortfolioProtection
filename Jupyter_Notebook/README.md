@@ -25,7 +25,7 @@ Part 0 - Data
 Part 1.A — Technical Indicator Trading
   - Multiple Testing Function
   - MACD Indicator
-  - EVM Indicator
+  - EMV Indicator
   - RSI Indicator
 
 Part 1.B — Machine Learning and Deep Learning Trading Models
