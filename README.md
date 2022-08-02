@@ -19,9 +19,9 @@
      - Google Colab (Cloud Notebook)
      - Jupyter Notebook File 
      - Data  
-  3. [→ Aditional Components /!\ In construction /!\ ←](Additional_files)
+  3. [→ Aditional Components ←](Additional_files)
      - Tables 
-     - Graphs 
+     - Illustrations  
 
 <br />
 
