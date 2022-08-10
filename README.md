@@ -11,15 +11,15 @@
 
 
 ## Summary of the repository:
-  1. [→ Webapp Dashboard ←](Webapp_Dashboard)
+  1. [→ Webapp Dashboard](Webapp_Dashboard)
      - Use the Webapp
      - Deploy locally the Webapp
      - Data
-  2. [→ Jupyter Notebook ←](Jupyter_Notebook)
+  2. [→ Jupyter Notebook](Jupyter_Notebook)
      - Google Colab (Cloud Notebook)
      - Jupyter Notebook File 
      - Data  
-  3. [→ Aditional Components ←](Additional_files)
+  3. [→ Aditional Components](Additional_files)
      - Tables 
      - Illustrations  
 
