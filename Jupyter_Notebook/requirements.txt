@@ -1,45 +1,10 @@
-
-import pandas as pd 
-import numpy as np 
-import matplotlib.pyplot as plt
-import seaborn as sns
-from tqdm import tqdm
-import warnings
-warnings.filterwarnings("ignore")
-import yfinance as yf
-import datetime
-from scipy.stats import skew
-from scipy.stats import kurtosis
-from scipy.stats import t
-from scipy.stats import t
-
-from sklearn.preprocessing import RobustScaler
-from sklearn.svm import SVR
-from sklearn.metrics import make_scorer
-from sklearn.model_selection import GridSearchCV
-
-import optuna
-from keras.models import Sequential
-from keras.layers import Dense, BatchNormalization, Dropout
-from tensorflow.keras.optimizers import Adam, SGD, RMSprop, Adadelta, Adagrad, Adamax, Nadam, Ftrl
-import warnings
-warnings.filterwarnings('ignore')
-from sklearn.preprocessing import RobustScaler
-
-import optuna
-from keras.models import Sequential
-from keras.layers import Dense, BatchNormalization, Dropout
-from tensorflow.keras.optimizers import Adam, SGD, RMSprop, Adadelta, Adagrad, Adamax, Nadam, Ftrl
-import warnings
-warnings.filterwarnings('ignore')
-from sklearn.preprocessing import RobustScaler
-
-import optuna
-from keras.models import Sequential
-from keras.layers import Dense, BatchNormalization, Dropout
-from tensorflow.keras.optimizers import Adam, SGD, RMSprop, Adadelta, Adagrad, Adamax, Nadam, Ftrl
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, LSTM, Dropout
-from tensorflow.keras.callbacks import EarlyStopping
-import warnings
-warnings.filterwarnings('ignore')
+pandas – 1.4.3
+numpy – 1.23.1
+matplotlib – 3.5.2
+seaborn – 0.11.2
+tqdm – 4.64.0
+scipy – 1.9.0
+sklearn – 1.1.2
+keras – 2.9.0
+tensorflow – 2.9.1
+optuna – 2.10.1
