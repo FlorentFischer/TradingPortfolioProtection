@@ -2,7 +2,7 @@
 
 <br />
 
-## Master Thesis: Trading Portfolio Protection GitHub Repository 
+## Master Thesis: Algorithmic Trading with Portfolio Protection GitHub Repository 
 
 ###### Webapp link: https://algotradingportfolioprotection.pythonanywhere.com/
 ###### Google Colab Jupyter Notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KmMrqGmGeoWYD4kcAjCdqDjtTJDyXB9v?usp=sharing) 
